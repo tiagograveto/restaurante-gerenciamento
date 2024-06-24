@@ -72,6 +72,9 @@ class Cliente:
             warning.setWindowTitle("Mais+")
             warning.setIcon(QMessageBox.Warning)
             warning.exec_()
+        else:
+            self._interface.pages.setCurrentWidget(self._interface.payment)
+
 
 
 
