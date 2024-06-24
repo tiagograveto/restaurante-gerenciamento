@@ -17,6 +17,7 @@ class Administrador:
         self._interface.pages.setCurrentIndex(0)
         self._interface.show()
     
+    
     def carregarBotoes(self):
         self._interface.homeButton.clicked.connect(lambda x: self._interface.pages.setCurrentWidget(self._interface.page))
         self._interface.moverButton.clicked.connect(lambda x:self._interface.pages.setCurrentWidget(self._interface.page_3))
