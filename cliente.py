@@ -1,5 +1,5 @@
 from PySide6 import QtWidgets, QtCore
-from PySide6.QtCore import Qt
+from PySide6.QtWidgets import QMessageBox
 from PySide6.QtUiTools import QUiLoader
 
 from modelo import MENU
@@ -66,7 +66,12 @@ class Cliente:
         return sum(item.get_price() for item in lista)
     
     def aoClicarPagamento(self):
-        print(self.getListaDoCarrinho())
+        if(self.getTotalCarrinho() == 0):
+            warning = QMessageBox(self._interface)
+            warning.setText("O seu carrinho está vazio")
+            warning.setWindowTitle("Mais+")
+            warning.setIcon(QMessageBox.Warning)
+            warning.exec_()
 
 
 
