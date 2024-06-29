@@ -3,9 +3,7 @@ from PySide6.QtWidgets import QMessageBox
 from PySide6.QtUiTools import QUiLoader
 from PySide6.QtCore import QPropertyAnimation, QEasingCurve
 
-import time
-
-from modelo import MENU, Drink, Burger, Side, Dessert, Combo, Cart, Pedido, ItemStatus
+from modelo import MENU, Drink, Burger, Side, Dessert, Combo, Cart, Pedido, ItemStatus, PEDIDOS
 
 class Cliente:
 
@@ -117,7 +115,7 @@ class Cliente:
     
     def enviarPedido(self):
         pedido = Pedido(self.cart, ItemStatus.IN_PREPARATION)
-        print(pedido.get_items)
+        PEDIDOS.append(pedido)
         self.resetar()
 
     def resetar(self):

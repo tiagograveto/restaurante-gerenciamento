@@ -1,6 +1,8 @@
 from PySide6 import QtWidgets
 from PySide6.QtUiTools import QUiLoader
 
+from modelo import PEDIDOS
+
 class Administrador:
     def __init__ (self):
         self._interface :QtWidgets.QWidget = None
@@ -16,7 +18,6 @@ class Administrador:
         self.carregarBotoes()
         self._interface.pages.setCurrentIndex(0)
         self._interface.show()
-    
     
     def carregarBotoes(self):
         self._interface.homeButton.clicked.connect(lambda x: self._interface.pages.setCurrentWidget(self._interface.page))
