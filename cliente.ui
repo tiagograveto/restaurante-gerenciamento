@@ -29,15 +29,15 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="mainpage">
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>190</x>
+       <x>10</x>
        <y>100</y>
-       <width>461</width>
+       <width>781</width>
        <height>221</height>
       </rect>
      </property>
@@ -51,11 +51,16 @@
     <widget class="QPushButton" name="mainButton">
      <property name="geometry">
       <rect>
-       <x>360</x>
+       <x>330</x>
        <y>390</y>
-       <width>131</width>
+       <width>141</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
      </property>
      <property name="text">
       <string>Fazer um pedido</string>
@@ -446,6 +451,87 @@
     <zorder>paymentList</zorder>
     <zorder>total_2</zorder>
     <zorder>paymentInfo</zorder>
+   </widget>
+   <widget class="QWidget" name="order">
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>60</y>
+       <width>661</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>30</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Pagamento realizado com sucesso
+Seu pedido é o número</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>310</y>
+       <width>661</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>30</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>e está sendo preparado...</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="orderId">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>220</y>
+       <width>551</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>30</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>500</y>
+       <width>551</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Você será redirecionado a página inicial em 10 segundos..</string>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>

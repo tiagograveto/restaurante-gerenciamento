@@ -1,4 +1,4 @@
-from PySide6 import QtWidgets, QtCore
+from PySide6 import QtWidgets, QtCore, QtGui
 from PySide6.QtWidgets import QMessageBox
 from PySide6.QtUiTools import QUiLoader
 from PySide6.QtCore import QPropertyAnimation, QEasingCurve
@@ -60,17 +60,13 @@ class Cliente:
             item = lista[i]
             widgetItem = QtWidgets.QListWidgetItem(item.get_name())
             # Adding data start
-            widgetItem.setData(QtCore.Qt.UserRole, i)
+            widgetItem.setData(QtCore.Qt.UserRole, MENU.index(item))
             # Adding data stop
             self._interface.menuList.addItem(widgetItem)
 
     def aoClicarItemMenu(self, clickedItem):
         widgetItem = QtWidgets.QListWidgetItem(clickedItem.text())
         menuIndex = clickedItem.data(QtCore.Qt.UserRole)
-        # Adding data start
-        widgetItem.setData(QtCore.Qt.UserRole, menuIndex)
-        print(menuIndex)
-        # Adding data stop
         self._interface.cartList.addItem(widgetItem)
         self.cart.add_item(MENU[menuIndex])
         self._interface.total.setText(f"TOTAL: {self.cart.get_total_price():.2f}")
@@ -97,9 +93,6 @@ class Cliente:
             for i in range(len(lista)):
                 item = lista[i]
                 widgetItem = QtWidgets.QListWidgetItem(item.get_name())
-                # Adding data start
-                widgetItem.setData(QtCore.Qt.UserRole, i)
-                # Adding data stop
                 self._interface.paymentList.addItem(widgetItem)
     
     def aoClicarMetodo(self):
@@ -116,7 +109,9 @@ class Cliente:
     def enviarPedido(self):
         pedido = Pedido(self.cart, ItemStatus.IN_PREPARATION)
         PEDIDOS.append(pedido)
-        self.resetar()
+        self._interface.pages.setCurrentWidget(self._interface.order)
+        self._interface.orderId.setText(f"#{PEDIDOS.index(pedido) + 1}")
+        QtCore.QTimer.singleShot(10 * 1000, self.resetar)
 
     def resetar(self):
         self._interface.pages.setCurrentWidget(self._interface.mainpage)
@@ -127,6 +122,7 @@ class Cliente:
         self._interface.total_2.setText(f"TOTAL: ")
         self._interface.progress_bar.setValue(0)
         self._interface.paymentInfo.setText("")
+        self._interface.orderId.setText("")
         self.cart = Cart()
 
             
