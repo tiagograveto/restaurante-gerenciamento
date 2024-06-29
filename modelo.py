@@ -6,6 +6,7 @@ class ItemStatus(IntEnum):
     IN_PREPARATION = 2
     DELIVERED = 3
 
+
 class Item:
     def __init__(self, name, price):
         self.name = name
@@ -80,6 +81,9 @@ class Cart:
 
     def add_item(self, item):
         self.items.append(item)
+    
+    def rem_item(self, item):
+        self.items.pop(item)
 
     def get_total_price(self):
         return sum(item.get_price() for item in self.items)

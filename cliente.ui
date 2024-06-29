@@ -29,7 +29,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="mainpage">
     <widget class="QLabel" name="label_3">
@@ -63,40 +63,6 @@
     </widget>
    </widget>
    <widget class="QWidget" name="cart">
-    <widget class="QWidget" name="verticalLayoutWidget">
-     <property name="geometry">
-      <rect>
-       <x>470</x>
-       <y>0</y>
-       <width>331</width>
-       <height>421</height>
-      </rect>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <item>
-       <widget class="QLabel" name="label">
-        <property name="text">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Carrinho:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QListWidget" name="cartList">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="textElideMode">
-         <enum>Qt::ElideNone</enum>
-        </property>
-        <property name="wordWrap">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
     <widget class="QPushButton" name="cartButton">
      <property name="geometry">
       <rect>
@@ -160,10 +126,10 @@
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
      </property>
     </widget>
-    <widget class="QPushButton" name="hamburguers">
+    <widget class="QPushButton" name="drinkButton">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>160</x>
        <y>10</y>
        <width>91</width>
        <height>41</height>
@@ -183,12 +149,12 @@
       <string>Bebidas</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="sides">
+    <widget class="QPushButton" name="burgerButton">
      <property name="geometry">
       <rect>
-       <x>140</x>
+       <x>10</x>
        <y>10</y>
-       <width>101</width>
+       <width>111</width>
        <height>41</height>
       </rect>
      </property>
@@ -199,12 +165,12 @@
       <string>Hamburgueres</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="sides_2">
+    <widget class="QPushButton" name="sidesButton">
      <property name="geometry">
       <rect>
        <x>280</x>
        <y>10</y>
-       <width>131</width>
+       <width>121</width>
        <height>41</height>
       </rect>
      </property>
@@ -215,12 +181,12 @@
       <string>Acompanhamentos</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="desert">
+    <widget class="QPushButton" name="dessertButton">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>10</x>
        <y>530</y>
-       <width>91</width>
+       <width>101</width>
        <height>41</height>
       </rect>
      </property>
@@ -231,7 +197,7 @@
       <string>Sobremesas</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="desert_2">
+    <widget class="QPushButton" name="comboButton">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -247,12 +213,12 @@
       <string>Combos</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="desert_3">
+    <widget class="QPushButton" name="showAllButton">
      <property name="geometry">
       <rect>
-       <x>280</x>
+       <x>270</x>
        <y>530</y>
-       <width>111</width>
+       <width>131</width>
        <height>41</height>
       </rect>
      </property>
@@ -261,6 +227,53 @@
      </property>
      <property name="text">
       <string>Mostrar tudo</string>
+     </property>
+    </widget>
+    <widget class="QListWidget" name="cartList">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>40</y>
+       <width>311</width>
+       <height>397</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="textElideMode">
+      <enum>Qt::ElideNone</enum>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="total_3">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>0</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-weight: bold</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Carrinho&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
      </property>
     </widget>
    </widget>
@@ -286,7 +299,7 @@
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QPushButton" name="creditCard">
+    <widget class="QPushButton" name="creditButton">
      <property name="geometry">
       <rect>
        <x>610</x>
@@ -304,7 +317,7 @@
       <string>Cartão de Crédito</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="debitCard">
+    <widget class="QPushButton" name="debitButton">
      <property name="geometry">
       <rect>
        <x>610</x>
@@ -322,7 +335,7 @@
       <string>Cartão de Débito</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pix">
+    <widget class="QPushButton" name="pixButton">
      <property name="geometry">
       <rect>
        <x>610</x>
@@ -340,7 +353,10 @@
       <string>PIX</string>
      </property>
     </widget>
-    <widget class="QProgressBar" name="progressBar">
+    <widget class="QProgressBar" name="progress_bar">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>620</x>
@@ -350,16 +366,22 @@
       </rect>
      </property>
      <property name="value">
-      <number>24</number>
+      <number>0</number>
+     </property>
+     <property name="textVisible">
+      <bool>true</bool>
+     </property>
+     <property name="invertedAppearance">
+      <bool>false</bool>
      </property>
     </widget>
-    <widget class="QListWidget" name="cartList_2">
+    <widget class="QListWidget" name="paymentList">
      <property name="geometry">
       <rect>
        <x>50</x>
        <y>30</y>
        <width>511</width>
-       <height>501</height>
+       <height>471</height>
       </rect>
      </property>
      <property name="font">
@@ -374,19 +396,56 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="process">
+    <widget class="QLabel" name="total_2">
      <property name="geometry">
       <rect>
-       <x>290</x>
-       <y>280</y>
+       <x>50</x>
+       <y>520</y>
        <width>131</width>
-       <height>21</height>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-weight: bold</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;TOTAL: &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="paymentInfo">
+     <property name="geometry">
+      <rect>
+       <x>570</x>
+       <y>480</y>
+       <width>221</width>
+       <height>61</height>
       </rect>
      </property>
      <property name="text">
       <string/>
      </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
     </widget>
+    <zorder>progress_bar</zorder>
+    <zorder>label_2</zorder>
+    <zorder>creditButton</zorder>
+    <zorder>debitButton</zorder>
+    <zorder>pixButton</zorder>
+    <zorder>paymentList</zorder>
+    <zorder>total_2</zorder>
+    <zorder>paymentInfo</zorder>
    </widget>
   </widget>
  </widget>
