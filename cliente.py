@@ -117,6 +117,7 @@ class Cliente:
         self._interface.pages.setCurrentWidget(self._interface.order)
         self._interface.orderId.setText(f"#{PEDIDOS.index(pedido) + 1}")
         QtCore.QTimer.singleShot(10 * 1000, self.resetar)
+        
 
     def resetar(self):
         self._interface.pages.setCurrentWidget(self._interface.mainpage)

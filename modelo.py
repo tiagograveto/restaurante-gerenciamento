@@ -120,6 +120,15 @@ class Pedido:
     def set_status(self, status):
         self.status = status
 
+    def get_pedido(self):
+        name = f"#{PEDIDOS.index(self) + 1} \n"
+        for item in self.get_items():
+            name = name + " ->" + item.get_name() + "\n"
+
+        return name.rstrip()
+
+
+
 PEDIDOS = []
 MENU = [
         Drink("Água sem gás", 4.90, 500),

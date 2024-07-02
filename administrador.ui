@@ -268,7 +268,7 @@
     </widget>
    </widget>
    <widget class="QWidget" name="page_3">
-    <widget class="QListWidget" name="listWidget_2">
+    <widget class="QListWidget" name="ordersPreparation2">
      <property name="geometry">
       <rect>
        <x>70</x>
