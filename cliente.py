@@ -130,6 +130,9 @@ class Cliente:
         self._interface.paymentInfo.setText("")
         self._interface.orderId.setText("")
         self.cart = Cart()
+        self._interface.creditButton.setEnabled(True)
+        self._interface.debitButton.setEnabled(True)
+        self._interface.pixButton.setEnabled(True)
 
             
 

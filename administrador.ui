@@ -83,7 +83,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="page">
     <widget class="QLabel" name="pedido2">
@@ -278,7 +278,7 @@
       </rect>
      </property>
     </widget>
-    <widget class="QListWidget" name="listWidget_3">
+    <widget class="QListWidget" name="ordersDelivered2">
      <property name="geometry">
       <rect>
        <x>460</x>
@@ -330,7 +330,7 @@
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="deliverButton">
      <property name="geometry">
       <rect>
        <x>470</x>
