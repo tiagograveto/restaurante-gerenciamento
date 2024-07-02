@@ -74,8 +74,9 @@ class Cliente:
     def aoClicarItemCarrinho(self):
         index = self._interface.cartList.currentRow()
         if index >= 0:
-            item = self._interface.cartList.takeItem(index) 
+            item = self._interface.cartList.takeItem(index)
             self.cart.rem_item(index)
+            self._interface.total.setText(f"TOTAL: {self.cart.get_total_price():.2f}")
             del item
     
     def aoClicarPagamento(self):
@@ -103,6 +104,10 @@ class Cliente:
         self._interface.animation.setEndValue(100)
         self._interface.animation.start()
         self._interface.animation.finished.connect(self.enviarPedido)
+
+        self._interface.creditButton.setEnabled(False)
+        self._interface.debitButton.setEnabled(False)
+        self._interface.pixButton.setEnabled(False)
 
         self._interface.paymentInfo.setText(f"Siga as instruções na maquininha para \nproceder com o pagamento")
     
