@@ -83,7 +83,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="page">
     <widget class="QLabel" name="pedido2">
@@ -223,7 +223,7 @@
       </font>
      </property>
      <property name="text">
-      <string>400</string>
+      <string>0</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_2">
@@ -259,11 +259,11 @@
      <property name="font">
       <font>
        <family>Microsoft JhengHei Light</family>
-       <pointsize>40</pointsize>
+       <pointsize>35</pointsize>
       </font>
      </property>
      <property name="text">
-      <string>R$ 400</string>
+      <string>R$ 0</string>
      </property>
     </widget>
    </widget>
